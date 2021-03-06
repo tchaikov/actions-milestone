@@ -54,6 +54,8 @@ async function run() {
   const addMilestone = match(baseBranch, headBranch, configObject);
 
   if (!addMilestone) {
+    console.log('base-branch:', baseBranch);
+    console.log('head-branch:', headBranch);
     console.log('Milestone not hit, exiting');
     return;
   }
